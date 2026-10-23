@@ -1,0 +1,38 @@
+name: Publish worlds
+
+on:
+  push:
+    branches: [main]
+    paths: ["submissions/*.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-worlds
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Release each merged submission and list it
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          files=(submissions/*.json)
+          [ ${#files[@]} -eq 0 ] && exit 0
+          python tools/catalog.py publish "${files[@]}"
+      - name: Commit the index
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index.json submissions
+          git diff --cached --quiet || { git commit -m "List published worlds" && git push; }
