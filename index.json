@@ -1,5 +1,41 @@
 {
   "schema_version": "omnix-world-catalog-v1",
-  "updated_at": "",
-  "worlds": []
+  "updated_at": "2026-10-23T05:27:17+00:00",
+  "worlds": [
+    {
+      "id": "aurelia-echoes-beyond-the-gate",
+      "title": "Aurelia: Echoes Beyond the Gate",
+      "summary": "A complete fantasy isekai world where modern Earthborn arrivals wield memory-shaped magic, join a frontier guild, explore ancient map ruins, and decide whether two worlds should ever be permanently connected.",
+      "genre": "fantasy_isekai",
+      "tone": "heroic wonder, found family, political intrigue, ancient mystery",
+      "author": "autonomx",
+      "version": 1,
+      "published_at": "2026-10-23T05:27:14+00:00",
+      "bundle": {
+        "url": "https://github.com/autonomx/omnix-worlds/releases/download/world-aurelia-echoes-beyond-the-gate-v1/aurelia-echoes-beyond-the-gate.omnix-world.zip",
+        "sha256": "897516312ea237e59472dc6e53bfe85660ecb35a88c13481d9e6f01062a91a3e",
+        "bytes": 89344
+      },
+      "cover": {
+        "url": "https://github.com/autonomx/omnix-worlds/releases/download/world-aurelia-echoes-beyond-the-gate-v1/aurelia-echoes-beyond-the-gate-cover.webp",
+        "sha256": "cd9ec68b7801a0c686dd7cf5a652040de185cfd2489b29863852fa4a0c431573",
+        "bytes": 10414
+      }
+    },
+    {
+      "id": "vesper-9-city-of-borrowed-minds",
+      "title": "Vesper-9: City of Borrowed Minds",
+      "summary": "In 2099, Vesper-9 rises from the drowned Cascadian coast: a vertical city of corporate crowns, flooded foundations, perpetual rain, and borrowed identities. Corporations own utilities, security, medicine, and the legal definitions of memory and personhood. Cybernetics, artificial intelligence, immersive networks, and black-market modification make the impossible ordinary, but every convenience carries a contract, a surveillance trail, or a debt that can be collected from the body itself.",
+      "genre": "cyberpunk",
+      "tone": "rebellious, tense, intimate, noir, and socially grounded",
+      "author": "autonomx",
+      "version": 1,
+      "published_at": "2026-10-23T05:27:17+00:00",
+      "bundle": {
+        "url": "https://github.com/autonomx/omnix-worlds/releases/download/world-vesper-9-city-of-borrowed-minds-v1/vesper-9-city-of-borrowed-minds.omnix-world.zip",
+        "sha256": "26ec674aa8fb1d6b73422224713319f4d1388734f4b97b841d938f53b2c6b1f6",
+        "bytes": 52225
+      }
+    }
+  ]
 }
